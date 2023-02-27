@@ -2,7 +2,7 @@ import { ADDED, TOGGLED, COLORSELECTED, DELETED, ALLCOMPLETED, CLEARCOMPLETED } 
 import { initialState } from "./initialState";
 
 const nextTodoId = (todos) => {
-    const maxId = todos.reduce((maxId, todo)=>{Math.max(todo.id, maxId)}, -1);
+    const maxId = todos.reduce((maxId, todo)=>Math.max(todo.id, maxId), -1);
     return parseInt(maxId) + 1;
 }
 
